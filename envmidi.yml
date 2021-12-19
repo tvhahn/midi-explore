@@ -1,0 +1,16 @@
+name: midi
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - mamba
+  - jupyterlab
+  - scipy
+  - matplotlib
+  - mido 
+  - seaborn
+  - pandas
+  - scikit-learn
+  - click
+  - h5py 
+

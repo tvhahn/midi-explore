@@ -7,7 +7,7 @@
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BUCKET = [OPTIONAL] your-bucket-for-syncing-data (do not include 's3://')
 PROFILE = default
-PROJECT_NAME = midi_test
+PROJECT_NAME = Time-Series-GAN-Zoo
 PYTHON_INTERPRETER = python3
 
 ifeq (,$(shell which conda))
@@ -20,10 +20,16 @@ endif
 # COMMANDS                                                                      #
 #################################################################################
 
-## Install Python Dependencies
-requirements: test_environment
-	$(PYTHON_INTERPRETER) -m pip install -U pip setuptools wheel
-	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
+environment: test_environment
+ifeq (True,$(HAS_CONDA)) # assume on local
+	@echo ">>> Detected conda. Assume local computer. Installing packages from yml."
+	bash install_conda_local.sh
+else # assume on HPC
+	@echo ">>> No Conda detected. Assume on HPC."
+	bash hpc_install_env.sh
+	@echo ">>> venv created. Activate with source ~/ganzoo/bin/activate"
+endif
+
 
 ## Make Dataset
 data: requirements
