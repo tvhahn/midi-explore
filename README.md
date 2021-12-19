@@ -3,8 +3,20 @@ MIDI exploration
 
 Understanding the inner workings of MIDI files with Python.
 
-Project Organization
-------------
+
+
+## Resources
+
+<a href="https://youtu.be/040BKtnDdg0
+" target="_blank"><img src="http://img.youtube.com/vi/040BKtnDdg0/0.jpg" 
+alt="Programming MIDI" width="240" height="180" border="10" /></a>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/040BKtnDdg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## Project Organization
+
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
