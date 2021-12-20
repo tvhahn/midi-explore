@@ -7,7 +7,9 @@ dependencies:
   - jupyterlab
   - scipy
   - matplotlib
-  - mido 
+  - mido
+  - pretty_midi
+  - librosa 
   - seaborn
   - pandas
   - scikit-learn
