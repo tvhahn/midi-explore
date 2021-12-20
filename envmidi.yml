@@ -1,17 +1,22 @@
 name: midi
 channels:
+  - nvidia
+  - pytorch
   - conda-forge
 dependencies:
   - python=3.6
   - mamba
+  - pytorch=1.10.0
   - jupyterlab
   - scipy
+  - cudatoolkit=11.0.221=h6bb024c_0
   - matplotlib
   - mido
   - pretty_midi
   - librosa 
   - seaborn
   - pandas
+  - progress 
   - scikit-learn
   - click
   - h5py 
